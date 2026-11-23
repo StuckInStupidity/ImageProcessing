@@ -30,7 +30,7 @@ and to the word list, ready to be fed to a character recognition step.
 From the project folder:
 
 ```
-C:\TDM-GCC-64\bin\mingw32-make.exe
+C:\TDM-GCC-64\bin\mingw32-make.exe (main.exe)
 ```
 
 This creates the `output/` folders if needed and builds `main.exe`.
