@@ -11,12 +11,14 @@ SDL_Surface *manRotate(SDL_Surface *image, double angle){
 	Uint32 *pixels = (Uint32 *)image->pixels;
 	Uint32 *pixou = (Uint32 *)ans->pixels;
 	double radian = angle*M_PI/180.0;
+	double c = cos(radian);
+	double s = sin(radian);
 	double cx = (image->w-1.0)/2.0, cy = (image->h-1.0)/2.0;
 	for(int i=0;i<image->h;i++){
 		for(int j=0;j<image->w;j++){
 			double dx=j-cx, dy=i-cy;
-			int py=(int)round(cy+dy*cos(radian)+dx*sin(radian));
-			int px=(int)round(cx-dy*sin(radian)+dx*cos(radian));
+			int py=(int)round(cy+dy*c+dx*s);
+			int px=(int)round(cx-dy*s+dx*c);
 			if(py<0||py>=image->h||px<0||px>=image->w) pixou[i*image->w+j]=0xFFFFFFFF;
 			else pixou[i*image->w+j]=pixels[py*image->w+px];
 		}
