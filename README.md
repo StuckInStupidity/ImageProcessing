@@ -1,7 +1,6 @@
 # Word Search Solver
 
 Given a picture of a word search puzzle, the program locates each letter belonging to the grid 
-
 and to the word list, ready to be fed to a character recognition step.
 
 > [!NOTE]
