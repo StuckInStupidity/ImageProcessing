@@ -131,7 +131,7 @@ Letters find_letters(SDL_Surface *image, SDL_Surface *copy, const char *folder, 
 					start = n;
 				}
 				prev_cy = cy;
-				if(folder) arr[n].s = normalize(letter); // to avoid autorotate using it also
+				if(folder) arr[n].s = normalize(letter); // to avoid autorotate using it again
 				else arr[n].s = letter;
 				arr[n].cx = cx;
 				arr[n].cy = cy;
