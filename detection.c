@@ -131,7 +131,8 @@ Letters find_letters(SDL_Surface *image, SDL_Surface *copy, const char *folder, 
 					start = n;
 				}
 				prev_cy = cy;
-				arr[n].s = normalize(letter);
+				if(folder) arr[n].s = normalize(letter); // to avoid autorotate using it again
+				else arr[n].s = letter;
 				arr[n].cx = cx;
 				arr[n].cy = cy;
 				arr[n].row = row;
@@ -140,7 +141,7 @@ Letters find_letters(SDL_Surface *image, SDL_Surface *copy, const char *folder, 
 					snprintf(name, sizeof(name), "%s/letter_%d.png", folder, ++cnt);
 					IMG_SavePNG(arr[n].s, name);
 				}
-				SDL_FreeSurface(letter);
+				if(folder) SDL_FreeSurface(letter);
 				n++;
 			}
 		}
