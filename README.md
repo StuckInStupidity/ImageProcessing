@@ -35,9 +35,7 @@ C:\TDM-GCC-64\bin\mingw32-make.exe opti.exe
 ```
 
 This creates the `output/` folders if needed.
-
 `opti.exe` is built with flag -O2, `main.exe` without.
-
 > [!NOTE]
 > Add as many C flags as needed in a new variable `CFLAGS`.
 
