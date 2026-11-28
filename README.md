@@ -4,7 +4,7 @@ Given a picture of a word search puzzle, the program locates each letter belongi
 and to the word list, ready to be fed to a character recognition step.
 
 > [!NOTE]
-> **Target platform:** Windows
+> **Target platform:** Windows (for compilation only)
 > 
 > Written in C with SDL2.
 
@@ -20,7 +20,7 @@ and to the word list, ready to be fed to a character recognition step.
 
 ## Requirements
 
-- Windows
+- Windows (for compilation only)
 - TDM-GCC-64 installed in `C:\TDM-GCC-64`
 - SDL2 in `C:\SDL2`
 - SDL2_image in `C:\SDL2_image`
@@ -35,8 +35,11 @@ C:\TDM-GCC-64\bin\mingw32-make.exe opti.exe
 ```
 
 This creates the `output/` folders if needed.
+
 `opti.exe` is built with flag -O2, `main.exe` without.
-Add as many C flags as needed in a new variable.
+
+> [!NOTE]
+> Add as many C flags as needed in a new variable `CFLAGS`.
 
 ## Usage
 
