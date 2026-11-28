@@ -117,7 +117,7 @@ Deletes the generated images in `output/`. `main.exe` is kept, so you can run it
 C:\TDM-GCC-64\bin\mingw32-make.exe terminate
 ```
 
-Deletes the generated images **and** `main.exe`. The next build recompiles everything.
+Deletes the generated images **and** `main.exe`/`opti.exe`. The next build recompiles everything.
 
 ## Project structure
 
