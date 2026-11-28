@@ -30,10 +30,13 @@ and to the word list, ready to be fed to a character recognition step.
 From the project folder:
 
 ```
-C:\TDM-GCC-64\bin\mingw32-make.exe (main.exe)
+C:\TDM-GCC-64\bin\mingw32-make.exe main.exe
+C:\TDM-GCC-64\bin\mingw32-make.exe opti.exe
 ```
 
-This creates the `output/` folders if needed and builds `main.exe`.
+This creates the `output/` folders if needed.
+`opti.exe` is built with flag -O2, `main.exe` without.
+Add as many C flags as needed in a new variable.
 
 ## Usage
 
